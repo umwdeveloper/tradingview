@@ -60,7 +60,8 @@ app.get('/', async (req, res) => {
         return res.status(500).json({ error: 'Failed to fetch search URL' });
     }
 
-    res.json({ searchUrl });
+    // res.json({ searchUrl });
+    res.redirect(searchUrl);
 });
 
 app.listen(port, () => {
