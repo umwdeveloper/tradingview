@@ -10,7 +10,7 @@ function sleep(ms) {
 
 async function searchOnTradingView(query) {
     // Launch a headless browser
-    const browser = await puppeteer.launch({ headless: false }); // Change to headless: true for production
+    const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox'] }); // Change to headless: true for production
     const page = await browser.newPage();
 
     try {
